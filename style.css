@@ -12,13 +12,18 @@
     }
 
    h1{
+    color: #ffffff;
+    background-color: #000;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0%;
         margin: 10px;
         padding:10px;
-        border:3px solid #000;
+        border: 1px solid #000;
    }
 
    p{
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     margin-top:5x;
  }
 
@@ -32,6 +37,26 @@
  }
 
  th, td {
-    background-color: rgb(245, 41, 41);
-  border: 3px solid #000;
+    color: #ffffff;
+    background-color: #000;
+  border: 3px solid #ffffff;
 }
+
+img {
+  width: 250px;
+  height: 300px;
+}
+
+.foto{
+    float: left;
+}
+
+.baixo{
+    clear: both;
+}
+
+ .enviar {
+    color: #ffffff;
+    background-color: #000000;
+    font-weight: bold;
+ }
