@@ -19,7 +19,7 @@
     top: 0%;
         margin: 10px;
         padding:10px;
-        border: 1px solid #000;
+        border:0ch solid #000;
    }
 
    p{
@@ -73,30 +73,27 @@ color: #000;
 padding: auto;
  }
 
- .tampa{
-    border: 0ch;
- }
 
 .sobre{
     background-color: #686868;
-    padding: 20px;
+     padding: 10px;
      color: #000000;
 }
 
 .projetos{
 background-color: #504f4f;
- padding: 20px;
+  padding: 10px;
   color: #000000;
 }
 
 .habilidade{
 background-color: #383838;
- padding: 20px;
+ padding: 10px;
   color: #000000;
 }
 
 .contato{
 background-color: #1f1f1f;
- padding: 20px;
+  padding: 10px;
  color: #000000;
 }
