@@ -61,3 +61,36 @@ img {
     background-color: #000000;
     font-weight: bold;
  }
+
+ .box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr)
+ }
+
+ .tampa{
+    border: 0ch;
+ }
+
+.sobre{
+    background-color: #686868;
+    padding: 20px;
+     color: #000000;
+}
+
+.projetos{
+background-color: #504f4f;
+ padding: 20px;
+  color: #000000;
+}
+
+.habilidade{
+background-color: #383838;
+ padding: 20px;
+  color: #000000;
+}
+
+.contato{
+background-color: #151515;
+ padding: 20px;
+ color: #000000;
+}
