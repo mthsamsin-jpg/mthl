@@ -70,7 +70,8 @@ img {
  .box a {
 text-decoration: none;
 color: #000;
-padding: auto;
+padding: 0;
+margin: 0;
  }
 
 
@@ -96,4 +97,16 @@ background-color: #383838;
 background-color: #1f1f1f;
   padding: 10px;
  color: #000000;
+}
+
+
+@media (max-width: 768px){
+  .box {
+    grid-template-columns: 1fr; 
+  }
+
+  .box a {
+    padding: 12px 0;
+    border-bottom: 1px solid #444; 
+  }
 }
