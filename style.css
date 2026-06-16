@@ -67,6 +67,12 @@ img {
     grid-template-columns: repeat(4,1fr)
  }
 
+ .box a {
+text-decoration: none;
+color: #000;
+padding: auto;
+ }
+
  .tampa{
     border: 0ch;
  }
@@ -90,7 +96,7 @@ background-color: #383838;
 }
 
 .contato{
-background-color: #151515;
+background-color: #1f1f1f;
  padding: 20px;
  color: #000000;
 }
