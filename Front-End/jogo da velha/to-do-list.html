@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serifc;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            max-width: 380px;
+        }
+
+        input {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            border: 20px;
+            padding: 5px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Tarefas de Casa</h1>
+
+    <div>
+
+        <input type="text" id="casa" placeholder="Adicionar nova tarefa">
+
+        <button onclick="adicionarTarefa()">Adicionar tarefa</button>
+
+    </div>
+
+    <ul>
+        <li>
+            <input type="checkbox"> <span>Arrumar o quarto</span>
+            <button onclick="excluirTarefa">Excluir</button>
+        </li>
+        <li>
+            <input type="checkbox"> <span>Lavar a louça</span>
+            <button onclick="excluirTarefa">Excluir</button>
+        </li>
+        <li>
+            <input type="checkbox"> <span>Varrer a casa</span>
+            <button onclick="excluirTarefa">Excluir</button>
+        </li>
+        <li>
+            <input type="checkbox"> <span>Pagar as contas</span>
+            <button onclick="excluirTarefa">Excluir</button>
+        </li>
+    </ul>
+
+    <script src="to-do-list.js"></script>
+
+</body>
+
+</html>

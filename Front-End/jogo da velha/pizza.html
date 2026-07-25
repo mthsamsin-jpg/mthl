@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        button{
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+                margin-bottom: 20px;
+        }
+
+        label,select{
+            display: block;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+    <h1>Faça seu pedido!</h1>
+
+  <label for="opecao">Selecione o pedido</label>
+
+  <b></b>
+
+    <select id="opecao">
+
+        <option value="">Selecione</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+
+
+    </select>
+
+    <button onclick="pedidoDePizza()">Enviar Pedido</button>
+
+    <b></b>
+
+    <p id="mensagem"></p>
+
+
+<script src="pizza.js"></script>
+
+</body>
+</html>

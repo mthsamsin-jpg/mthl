@@ -7,6 +7,7 @@
     <title>Matheus Sam-Sin</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -17,8 +18,8 @@
             <ul class="box"><!--lista não orenada para links do nosso menu-->
                 <li class="sobre"><a href="#sobre">Sobre mim</a></li>
                 <li class="projetos"><a href="#Projetos">Projetos</a></li>
-                <li class="habilidade"><a href="#habilidades",>Habilidades e Tecnologia</a></li>
-                <li class="contato"><a href="#Contato">Contato</a></li>
+                <li class="habilidade"><a href="#habilidades" ,>Habilidades e Tecnologia</a></li>
+                <li class="Contato"><a href="#Contato">Contato</a></li>
                 <!-- <li>Sobre mim</li> -->
             </ul>
         </nav>
@@ -27,38 +28,40 @@
     <section id="sobre">
         <h2 class="negritos block">Sobre mim;</h2>
 
-          <img class="foto" src="mthsin.jpg">
+        <img class="foto" src="mthsin.jpg">
 
         <div class="conteudo">
 
-        <article>
+            <article>
 
-            <p>
+                <p>
                 <p class="texto">
-                Olá eu sou Matheus, sou um desenvolvedor de software.Este espaço foi construído do zero para centralizar
-                meus projetos, minhas habilidadese a minha evolução na área de tecnologia. Aqui, você pode
-                entender como penso a arquitetura de um software, quais problemas já resolvi e de que forma posso ajudar
-                o seu negócio ou produto a crescer por meio da programação.
+                    Olá eu sou Matheus, sou um desenvolvedor de software.Este espaço foi construído do zero para
+                    centralizar
+                    meus projetos, minhas habilidadese a minha evolução na área de tecnologia. Aqui, você pode
+                    entender como penso a arquitetura de um software, quais problemas já resolvi e de que forma posso
+                    ajudar
+                    o seu negócio ou produto a crescer por meio da programação.
                 </p>
-            </p>
+                </p>
 
-        </article>
+            </article>
 
         </div>
 
         <div class="baixo">
 
-        <aside>
+            <aside>
 
-            <h3>Habilidades</h3 class="negritos">
+                <h3>Habilidades</h3 class="negritos">
 
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
+                <ul class="conteiner">
+                    <li class="cubo" id="cubo1">HTML</li>
+                    <li class="cubo" id="cubo2">CSS</li>
+                    <li class="cubo" id="cubo3">JavaScript</li>
+                </ul>
 
-        </aside>
+            </aside>
 
         </div>
 
@@ -125,53 +128,71 @@
     <footer>
         <p>Direitos reservados a Matheus</p>
 
-        <section id="Contato">
+        <section class="pe dir" id="Contato">
 
             <h2>Contato</h2 class="negritos">
 
             <p>Tem um projeto em mente? Entre em contato;</p>
 
+          <section class="mail">
             <address>
-                E-mail: <a href="mailto:lucassamsin@gmail.com">lucassamsin@gmail.com</a> <br>
-                Telefone: <a href="tel: +55 48991961412">(48) 9 9196-1412</a>
-                
+               <i class="fa-solid fa-at"></i>E-mail: <a href="mailto:lucassamsin@gmail.com">lucassamsin@gmail.com</a> <br>
+                <i class="fa-solid fa-phone"></i>Telefone: <a href="tel: +55 48991961412">(48) 9 9196-1412</a>
+
             </address>
+            </div>
 
-            <form action="">
 
-                <label for="nome">Nome: </label>
-                <input type="text" name="" id="nome" required <br>
+            <form id="contacForm" class="formulario">
 
-                <label for="email">E-mail: </label>
-                <input type="email" email="" id="email" required <br>
+                <h3>Formulário</h3>
 
-                <label for="telefone">Telefone: </label>
-                <input type="tel" telefone="" id="telefone" required <br>
+                <label class="nome" for="nome"><i class="fa-solid fa-user"></i>Nome: </label>
+                <input class="nome" type="text" name="" id="nome" required> <br>
 
-                <label for="assunto">Assunto: </label>
-                <select name="assunto" id="assunto">
+              <label class="nome" for="email"><i class="fa-solid fa-envelope"></i>E-mail: </label>
+                <input class="nome" type="email" email="" id="email" required> <br>
+
+                <label class="nome" for="telefone"><i class="fa-solid fa-phone"></i>Telefone: </label>
+                <input class="nome" type="tel" telefone="" id="telefone" required> <br>
+
+                <select>
+
+                <label class="nome" for="assunto"><i class="fa-solid fa-pen-to-square"></i>Assunto: </label>
+
+                   
                     <option value="orçamento">Orçamento</option>
                     <option value="dúvida">Dúvida</option>
                     <option value="outro">Outro</option>
+                
                 </select>
 
                 <br>
 
-                <label for="menssagem">Menssagem: </label> <br>
-                <textarea name="menssagem" id="menssagem" cols="30" rows="10"></textarea> <br>
+                <label class="nome" for="menssagem"><i class="fa-solid fa-comment-dots"></i>Menssagem: </label> <br>
+                <textarea class="nome" name="menssagem" id="menssagem" cols="30" rows="10"></textarea> <br>
+
+            </section>
+
+            <div>
 
                 <input type="checkbox" name="inscricao" id="inscricao">
-                <label for="iscricao">Deseja receber minha Newslatter?Fique por dentro!</label>
+                <label for="newslatter">Deseja receber minha Newslatter?Fique por dentro!</label>
+
+            </div>
 
                 <br>
 
                 <input class="enviar" type="submit" value="ENVIAR">
+                
 
             </form>
 
         </section>
 
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 
-</html

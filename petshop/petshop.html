@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Shop Estrela</title>
+
+<!-- Fontes do Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Arquivo de estilo separado -->
+<link rel="stylesheet" href="pet.css">
+</head>
+<body>
+
+<!-- ===== SEÇÃO INICIAL (HERO) ===== -->
+<section class="hero">
+  <!-- Patinhas decorativas no fundo -->
+  <div class="paw" style="top:12%;left:8%;width:46px;height:46px;transform:rotate(-18deg);" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="currentColor"><ellipse cx="32" cy="42" rx="16" ry="13"/><circle cx="14" cy="22" r="7"/><circle cx="27" cy="12" r="7"/><circle cx="41" cy="12" r="7"/><circle cx="53" cy="22" r="7"/></svg>
+  </div>
+  <div class="paw" style="top:22%;right:10%;width:34px;height:34px;transform:rotate(20deg);" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="currentColor"><ellipse cx="32" cy="42" rx="16" ry="13"/><circle cx="14" cy="22" r="7"/><circle cx="27" cy="12" r="7"/><circle cx="41" cy="12" r="7"/><circle cx="53" cy="22" r="7"/></svg>
+  </div>
+  <div class="paw" style="bottom:20%;left:14%;width:30px;height:30px;transform:rotate(8deg);" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="currentColor"><ellipse cx="32" cy="42" rx="16" ry="13"/><circle cx="14" cy="22" r="7"/><circle cx="27" cy="12" r="7"/><circle cx="41" cy="12" r="7"/><circle cx="53" cy="22" r="7"/></svg>
+  </div>
+  <div class="paw" style="bottom:16%;right:8%;width:50px;height:50px;transform:rotate(-10deg);" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="currentColor"><ellipse cx="32" cy="42" rx="16" ry="13"/><circle cx="14" cy="22" r="7"/><circle cx="27" cy="12" r="7"/><circle cx="41" cy="12" r="7"/><circle cx="53" cy="22" r="7"/></svg>
+  </div>
+
+  <!-- Logo + nome centralizados -->
+  <div class="hero-brand">
+    <div class="hero-logo">
+      <img src="petimg.jpeg" alt
+    </div>
+    <h1 class="hero-name">Pet Shop <span class="estrela">Estrela</span></h1>
+  </div>
+
+  <p class="hero-tagline">Carinho, saúde e estilo para o seu melhor amigo. Cadastre seu pet e vire parte da família.</p>
+
+  <!-- Setinha que rola até o cadastro -->
+  <a href="#cadastro" class="scroll-cue" aria-label="Ir para o formulário de cadastro">
+    <span>Cadastre-se</span>
+    <span class="arrow-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 4v16M5 13l7 7 7-7"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- Divisória ondulada -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,32 C240,60 480,4 720,20 C960,36 1200,58 1440,28 L1440,60 L0,60 Z" fill="#FBF6EC"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO DE CADASTRO ===== -->
+<section class="cadastro" id="cadastro">
+  <div class="cadastro-card">
+
+    <form class="cadastro-form" id="cadastroForm" novalidate>
+      <span class="cadastro-eyebrow">Novo por aqui?</span>
+      <h2>Cadastre seu pet</h2>
+      <p class="sub">Leva menos de um minuto. Preencha os dados abaixo.</p>
+
+      <div class="field" data-field="tutor">
+        <label for="tutor">Seu nome</label>
+        <input type="text" id="tutor" name="tutor" placeholder="Ex: Ana Souza" autocomplete="name">
+        <span class="error-msg"></span>
+      </div>
+
+      <div class="field-row">
+        <div class="field" data-field="pet">
+          <label for="pet">Nome do pet</label>
+          <input type="text" id="pet" name="pet" placeholder="Ex: Estrela">
+          <span class="error-msg"></span>
+        </div>
+        <div class="field" data-field="especie">
+          <label for="especie">Espécie</label>
+          <select id="especie" name="especie">
+            <option value="">Selecione</option>
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+            <option value="ave">Ave</option>
+            <option value="outro">Outro</option>
+          </select>
+          <span class="error-msg"></span>
+        </div>
+      </div>
+
+      <div class="field" data-field="telefone">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel">
+        <span class="error-msg"></span>
+      </div>
+
+      <div class="field" data-field="email">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="voce@email.com" autocomplete="email">
+        <span class="error-msg"></span>
+      </div>
+
+      <div class="field" data-field="obs">
+        <label for="obs">Observações (opcional)</label>
+        <textarea id="obs" name="obs" placeholder="Alguma preferência, alergia ou cuidado especial?"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Cadastrar</button>
+    </form>
+
+    <!-- Tela de sucesso, aparece depois do envio -->
+    <div class="success-panel" id="successPanel">
+      <svg class="paw-icon" viewBox="0 0 64 64" fill="currentColor"><ellipse cx="32" cy="42" rx="16" ry="13"/><circle cx="14" cy="22" r="7"/><circle cx="27" cy="12" r="7"/><circle cx="41" cy="12" r="7"/><circle cx="53" cy="22" r="7"/></svg>
+      <h3 id="successTitle">Cadastro recebido!</h3>
+      <p id="successText">Em breve entraremos em contato.</p>
+      <button type="button" id="resetBtn">Cadastrar outro pet</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Pet Shop Estrela · Feito com carinho para tutores e seus pets
+</footer>
+
+<!-- Arquivo de JavaScript separado -->
+<script src="pet.js"></script>
+</body>
+</html>

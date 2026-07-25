@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    
+
+        label,button{
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Formulário de contato</h1>
+
+    <form id="contacForm">
+
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required maxlength="256"/>
+
+         <label for="email">E-mail:</label>
+        <input type="email" id="email" required maxlength="200"/>
+
+         <label for="menssagem">Menssagem:</label>
+        <textarea required id="menssagem"></textarea>
+
+        <button type="submit">Enviar</button>
+
+
+    </form>     
+
+    <script src="validacao.js"></script>
+    
+</body>
+</html>

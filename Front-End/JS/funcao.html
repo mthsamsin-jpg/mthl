@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        label,button{
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Saudação Personaliza</h1>
+
+    <label for="hora">Digite seu nome:</label><input type="text" id="nome">
+    <label for="hora">Selecione a hora</label>
+
+    <select id="hora">
+
+        <option value="">Selecione</option>
+        <option value="8">Manhã (8)</option>
+        <option value="14">Tarde (14)</option>
+        <option value="20">Noite (20)</option>
+
+    </select>
+
+    <button onclick="mostraSaudacao()">Mostra saudação</button>
+
+    <b></b>
+
+    <p id="mensagem"></p>
+
+    <script src="funcao.js"></script>
+    
+</body>
+</html>
