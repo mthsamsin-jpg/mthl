@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora — Painel de Precisão</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="device">
+    <div class="plate">
+        <span class="brand"><span class="led"></span>Calc</span>
+        <span class="model">007</span>
+    </div>
+
+    <div class="screen">
+        <div class="expression" id="expression">&nbsp;</div>
+        <div class="result" id="result">0</div>
+    </div>
+
+    <div class="keypad" id="keypad">
+        <button class="key fn danger" data-action="clear"><span>AC</span></button>
+        <button class="key fn" data-action="paren-open"><span>(</span></button>
+        <button class="key fn" data-action="paren-close"><span>)</span></button>
+        <button class="key fn" data-action="backspace"><span>⌫</span></button>
+
+        <button class="key fn" data-action="sqrt"><span>√</span></button>
+        <button class="key fn" data-action="pow"><span>x^y</span></button>
+        <button class="key fn" data-action="percent"><span>%</span></button>
+        <button class="key op" data-action="op" data-value="÷"><span>÷</span></button>
+
+        <button class="key num" data-action="digit" data-value="7"><span>7</span></button>
+        <button class="key num" data-action="digit" data-value="8"><span>8</span></button>
+        <button class="key num" data-action="digit" data-value="9"><span>9</span></button>
+        <button class="key op" data-action="op" data-value="×"><span>×</span></button>
+
+        <button class="key num" data-action="digit" data-value="4"><span>4</span></button>
+        <button class="key num" data-action="digit" data-value="5"><span>5</span></button>
+        <button class="key num" data-action="digit" data-value="6"><span>6</span></button>
+        <button class="key op" data-action="op" data-value="−"><span>−</span></button>
+
+        <button class="key num" data-action="digit" data-value="1"><span>1</span></button>
+        <button class="key num" data-action="digit" data-value="2"><span>2</span></button>
+        <button class="key num" data-action="digit" data-value="3"><span>3</span></button>
+        <button class="key op" data-action="op" data-value="+"><span>+</span></button>
+
+        <button class="key fn" data-action="sign"><span>±</span></button>
+        <button class="key num" data-action="digit" data-value="0"><span>0</span></button>
+        <button class="key num" data-action="digit" data-value="."><span>.</span></button>
+        <button class="key accent" data-action="equals"><span>=</span></button>
+    </div>
+
+    <div class="hint">·</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
