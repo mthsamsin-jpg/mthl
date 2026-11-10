@@ -1,220 +1,361 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Sam-Sin</title>
+    <title>Creative Tech Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        neon: '#00f3ff', // Ciano tecnológico
+                        graycard: '#121212',
+                    }
+                }
+            }
+        }
+    </script>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilos customizados e animações */
+        body { background-color: #0a0a0a; color: #ffffff; overflow-x: hidden; }
+        
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+        }
 
+        /* Efeito de glow neon */
+        .glow-text:hover { text-shadow: 0 0 10px rgba(0, 243, 255, 0.7); }
+        .glow-box:hover { box-shadow: 0 0 20px rgba(0, 243, 255, 0.2); border-color: rgba(0, 243, 255, 0.5); }
+
+        /* Animação de revelação no scroll */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Esconde a barra de rolagem no canvas */
+        #canvas-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+    </style>
 </head>
+<body class="font-sans antialiased selection:bg-neon selection:text-black">
 
-<body>
-    <header>
-        <h1 class="negritos">MATHEUS LUCAS SAM-SIN GOMES</h1>
-        <nav> <!--Seção de navegação-->
-
-                <li class="sobre"><a href="#sobre">Sobre mim</a></li>
-                <li class="projetos"><a href="#Projetos">Projetos</a></li>
-                <li class="habilidade"><a href="#habilidades" ,>Habilidades e Tecnologia</a></li>
-                <li class="Contato"><a href="#Contato">Contato</a></li>
-                <!-- <li>Sobre mim</li> -->
-            </ul>
-        </nav>
-    </header>
-
-    <section id="sobre">
-        <h2 class="negritos block">Sobre mim;</h2>
-
-        <img class="foto" src="bobe.png">
-
-        <div class="conteudo">
-
-            <article>
-
-                <p>
-                <p class="texto">
-                    Olá eu sou Matheus, sou um desenvolvedor de software.Este espaço foi construído do zero para
-                    centralizar
-                    meus projetos, minhas habilidadese a minha evolução na área de tecnologia. Aqui, você pode
-                    entender como penso a arquitetura de um software, quais problemas já resolvi e de que forma posso
-                    ajudar
-                    o seu negócio ou produto a crescer por meio da programação.
-                </p>
-                </p>
-
-            </article>
-
-        </div>
-
-        <div class="baixo">
-
-            <aside>
-
-                <h3>Habilidades</h3 class="negritos">
-
-                <ul class="conteiner">
-                    <li class="cubo" id="cubo1">HTML</li>
-                    <li class="cubo" id="cubo2">CSS</li>
-                    <li class="cubo" id="cubo3">JavaScript</li>
-                </ul>
-
-            </aside>
-
-        </div>
-
-    </section>
-
-    <section id="Projetos">
-
-        <h2>Projetos</h2>
-
-        <article>
-            <h3>Portifólio</h3>
-
-            <p>
-                Este foi o primeiro site que desenvolvi.Decidi dar esse passo para marcar o início oficial da minha
-                trajetória pública como desenvolvedor de software. Mais do que uma simples página na internet, este
-                projeto foi o meu laboratório prático,para aplicar conceitos de arquitetura web, design responsivo e
-                estruturação de código limpo.
-            </p>
-
-        </article>
-
-    </section>
-
-    <section id="habilidades">
-
-        <h2>Habilidades e Tecnologias</h2 class="negritos">
-
-        <table>
-
-            <thead>
-                <tr>
-                    <th>Tecnologias</th class="negritos">
-                    <th>Níveis</th class="negritos">
-                    <th>Descrição</th class="negritos">
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td>Front-End</td>
-                    <td>Júnior</td>
-                    <td>Especializado no desenvolvimento de páginas web dinâmicas e integrações Back-end.</td>
-                </tr>
-
-                <tr>
-                    <td>HTML</td>
-                    <td>Júnior</td>
-                    <td>Capaz de construir estruturas de páginas web semânticas e responsivas.</td>
-                </tr>
-
-                <tr>
-                    <td>CSS</td>
-                    <td>Júnior</td>
-                    <td>Experiência com flexbox, grid e animações CSS.</td>
-                </tr>
-
-                <tr>
-                    <td>JavaScript</td>
-                    <td>Júnior</td>
-                    <td>Densenvolvimento de Script do lado do cliente para interções.</td>
-                </tr>
-
-                <tr></tr>
-                    <td>Back-end</td>
-                    <td>Júnior</td>
-                    <td>Especializado em arquitetura de dados e APIs.</td>
-                </tr>
-
-                <tr>
-                    <td>Node.js</td>
-                    <td>Júniot</td>
-                    <td>Manipulação de dados em JSON e comunicação com banco de dados SQL.</td>
-                </tr>
-
-
-            </tbody>
-
-        </table>
-
-    </section>
-
-    <footer>
-        <p>Direitos reservados a Matheus</p>
-
-        <section class="pe dir" id="Contato">
-
-            <h2>Contato</h2 class="negritos">
-
-            <p>Tem um projeto em mente? Entre em contato;</p>
-
-          <section class="mail">
-            <address>
-               <i class="fa-solid fa-at"></i>E-mail: <a href="mailto:lucassamsin@gmail.com">lucassamsin@gmail.com</a> <br>
-                <i class="fa-solid fa-phone"></i>Telefone: <a href="tel: +55 48991961412">(48) 9 9196-1412</a>
-
-            </address>
+    <!-- 1. Navbar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-dark/80 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tighter uppercase glow-text transition-all">MTH<span class="text-neon">.</span>DEV</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </div>
+        </div>
+    </nav>
 
+    <!-- 2. Hero Section com Three.js -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden" id="home">
+        <!-- Container do Three.js -->
+        <div id="canvas-container"></div>
 
-            <form id="contacForm" class="formulario">
+        <!-- Tipografia de Fundo -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 mix-blend-overlay">
+            <h1 class="text-[15vw] font-bold leading-none text-outline uppercase tracking-tighter">Innovation</h1>
+            <h1 class="text-[15vw] font-bold leading-none text-white/5 uppercase tracking-tighter -mt-[5vw]">Tech</h1>
+        </div>
 
-                <!-- <h3>Formulário</h3>
+        <!-- Call to action Hero -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-auto">
+            <p class="text-gray-400 text-sm mb-4 tracking-widest uppercase">Scroll to explore</p>
+            <a href="#about" class="inline-block w-6 h-10 border-2 border-gray-600 rounded-full relative">
+                <span class="absolute top-2 left-1/2 -translate-x-1/2 w-1 h-2 bg-neon rounded-full animate-bounce"></span>
+            </a>
+        </div>
+    </section>
 
-                <label class="nome" for="nome"><i class="fa-solid fa-user"></i>Nome: </label>
-                <input class="nome" type="text" name="" id="nome" required> <br>
+    <!-- 3. About Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto relative z-20 bg-dark" id="about">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Texto -->
+            <div class="reveal">
+                <h2 class="text-neon text-sm font-bold tracking-widest uppercase mb-4">Sobre Mim</h2>
+                <h3 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Criando ecossistemas digitais de alta performance.
+                </h3>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Sou Desenvolvedor Front-End e criador de ecossistemas digitais focados em alta performance, automações e integração com inteligência artificial. 
+                </p>
+                <p class="text-gray-400 leading-relaxed mb-8">
+                    Especialista na stack moderna (HTML5, CSS3, JavaScript, Tailwind CSS) com experiência prática no desenvolvimento de aplicações web robustas, back-ends eficientes com Cloudflare Workers, bancos de dados relacionais (Supabase) e experiências visuais imersivas.
+                </p>
+                <div class="flex gap-4">
+                    <span class="px-3 py-1 border border-gray-700 rounded-full text-xs text-gray-300">Front-End</span>
+                    <span class="px-3 py-1 border border-gray-700 rounded-full text-xs text-gray-300">Cloudflare</span>
+                    <span class="px-3 py-1 border border-gray-700 rounded-full text-xs text-gray-300">Supabase</span>
+                    <span class="px-3 py-1 border border-gray-700 rounded-full text-xs text-gray-300">AI Integration</span>
+                </div>
+            </div>
+            <!-- Foto -->
+            <div class="reveal relative">
+                <div class="absolute inset-0 bg-neon blur-3xl opacity-20 rounded-full"></div>
+                <!-- Certifique-se de que a imagem bob.png está na mesma pasta -->
+                <img src="bobe.png" alt="Foto de Perfil" class="relative z-10 w-full max-w-md mx-auto rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 border border-white/10 shadow-2xl" onerror="this.src='https://via.placeholder.com/400x500?text=Adicione+bob.png'">
+            </div>
+        </div>
+    </section>
 
-              <label class="nome" for="email"><i class="fa-solid fa-envelope"></i>E-mail: </label>
-                <input class="nome" type="email" email="" id="email" required> <br>
-
-                <label class="nome" for="telefone"><i class="fa-solid fa-phone"></i>Telefone: </label>
-                <input class="nome" type="tel" telefone="" id="telefone" required> <br> -->
-<!-- 
-                <select>
-
-                <label class="nome" for="assunto"><i class="fa-solid fa-pen-to-square"></i>Assunto: </label>
-
-                   
-                    <option value="orçamento">Orçamento</option>
-                    <option value="dúvida">Dúvida</option>
-                    <option value="outro">Outro</option>
-                
-                </select>
-
-                <br>
-
-                <label class="nome" for="menssagem"><i class="fa-solid fa-comment-dots"></i>Menssagem: </label> <br>
-                <textarea class="nome" name="menssagem" id="menssagem" cols="30" rows="10"></textarea> <br>
-
-            </section>
-
+    <!-- 4. Projects Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto relative z-20" id="projects">
+        <div class="flex justify-between items-end mb-16 reveal">
             <div>
+                <h2 class="text-neon text-sm font-bold tracking-widest uppercase mb-2">Portfolio</h2>
+                <h3 class="text-4xl md:text-5xl font-bold">Projetos em Destaque</h3>
+            </div>
+        </div>
 
-                <input type="checkbox" name="inscricao" id="inscricao">
-                <label for="newslatter">Deseja receber minha Newslatter?Fique por dentro!</label>
-
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-graycard p-8 rounded-2xl border border-white/5 transition-all duration-300 glow-box group cursor-pointer reveal">
+                <div class="flex justify-between items-start mb-12">
+                    <span class="text-xs font-mono text-neon">01 // FINTECH</span>
+                    <svg class="w-6 h-6 text-gray-500 group-hover:text-neon transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3 group-hover:text-neon transition-colors">Sistema Financeiro Inteligente</h4>
+                <p class="text-gray-400 text-sm mb-6">Aplicação financeira moderna e altamente dinâmica com IA integrada ("Group IA") e automações de ponta utilizando Cloudflare Workers para processamento eficiente e inteligência de dados aplicada.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">HTML5/CSS3</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Cloudflare Workers</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Group IA</span>
+                </div>
             </div>
 
-                <br>
+            <!-- Card 2 -->
+            <div class="bg-graycard p-8 rounded-2xl border border-white/5 transition-all duration-300 glow-box group cursor-pointer reveal delay-100">
+                <div class="flex justify-between items-start mb-12">
+                    <span class="text-xs font-mono text-neon">02 // MULTIMÍDIA</span>
+                    <svg class="w-6 h-6 text-gray-500 group-hover:text-neon transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3 group-hover:text-neon transition-colors">Cineteca</h4>
+                <p class="text-gray-400 text-sm mb-6">Ecossistema digital completo de entretenimento (filmes, séries, livros e animes) conectado ao Supabase, integrando APIs externas, IA embarcada e Cloudflare Workers para máxima performance.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Supabase</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">APIs</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">IA Embarcada</span>
+                </div>
+            </div>
 
-                <input class="enviar" type="submit" value="ENVIAR"> -->
-                
+            <!-- Card 3 -->
+            <div class="bg-graycard p-8 rounded-2xl border border-white/5 transition-all duration-300 glow-box group cursor-pointer reveal delay-200">
+                <div class="flex justify-between items-start mb-12">
+                    <span class="text-xs font-mono text-neon">03 // WEBGL</span>
+                    <svg class="w-6 h-6 text-gray-500 group-hover:text-neon transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3 group-hover:text-neon transition-colors">Experiência Visual 3D</h4>
+                <p class="text-gray-400 text-sm mb-6">Plataforma imersiva de design web moderno com animações tridimensionais fluidas e dinâmicas. Interface focada em quebrar os limites da web tradicional.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Three.js</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">WebGL</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">GSAP</span>
+                </div>
+            </div>
 
-            </form>
+            <!-- Card 4 -->
+            <div class="bg-graycard p-8 rounded-2xl border border-white/5 transition-all duration-300 glow-box group cursor-pointer reveal delay-300">
+                <div class="flex justify-between items-start mb-12">
+                    <span class="text-xs font-mono text-neon">04 // UI/UX</span>
+                    <svg class="w-6 h-6 text-gray-500 group-hover:text-neon transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3 group-hover:text-neon transition-colors">Start Fit</h4>
+                <p class="text-gray-400 text-sm mb-6">Landing page de alta conversão estruturada com foco em UI/UX para o setor fitness. Design responsivo, otimização de performance e animações focadas em retenção de usuários.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Landing Page</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">Tailwind CSS</span>
+                    <span class="text-xs bg-white/5 px-2 py-1 rounded text-gray-400">UI/UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <!-- 5. Contato e Rodapé -->
+    <footer class="py-32 px-6 border-t border-white/5 relative z-20 bg-darker" id="contact">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8">Let's Build Something <span class="text-neon">Amazing</span></h2>
+            <p class="text-gray-400 mb-12 max-w-xl mx-auto">Estou pronto para transformar suas ideias em ecossistemas digitais de alta performance. Entre em contato.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-16">
+                <a href="mailto:mthsamsin@gmail.com" class="text-xl hover:text-neon transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    mthsamsin@gmail.com
+                </a>
+                <a href="https://wa.me/5548991961412" target="_blank" class="text-xl hover:text-neon transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    (48) 99196-1412
+                </a>
+            </div>
 
+            <div class="flex justify-center space-x-6">
+                <!-- Links Sociais Fictícios (Adicione seus links reais) -->
+                <a href="#" class="text-gray-500 hover:text-white transition-colors">GitHub</a>
+                <a href="#" class="text-gray-500 hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="text-gray-500 hover:text-white transition-colors">Behance</a>
+            </div>
+            
+            <div class="mt-20 text-sm text-gray-600">
+                &copy; Matheus MTH.DEV. Todos os direitos reservados.
+            </div>
+        </div>
     </footer>
 
+    <!-- Scripts -->
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <script>
+        /* --- 1. Lógica do Three.js (Hero Section) --- */
+        const container = document.getElementById('canvas-container');
+        
+        // Configuração básica da cena
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
+
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Otimização mobile
+        container.appendChild(renderer.domElement);
+
+        // Carregamento da Textura (bob.png)
+        const textureLoader = new THREE.TextureLoader();
+        // O arquivo DEVE se chamar bob.png na mesma pasta
+        const texture = textureLoader.load('bob.png', 
+            () => { /* Callback de sucesso */ },
+            undefined, 
+            () => { console.warn("Aviso: Não foi possível carregar bob.png. Usando cor sólida no 3D."); }
+        );
+
+        // Geometria e Material (Esfera estilizada / Tech Core)
+        const geometry = new THREE.IcosahedronGeometry(2, 4); // Alta densidade para distorção
+        const material = new THREE.MeshStandardMaterial({
+            map: texture,
+            color: 0xffffff,
+            emissive: 0x00f3ff, // Ciano Neon
+            emissiveIntensity: 0.2,
+            wireframe: false,
+            roughness: 0.3,
+            metalness: 0.8
+        });
+
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        // Adicionando um wireframe ao redor para o efeito "tech"
+        const wireframeGeo = new THREE.IcosahedronGeometry(2.05, 1);
+        const wireframeMat = new THREE.MeshBasicMaterial({ color: 0x00f3ff, wireframe: true, transparent: true, opacity: 0.15 });
+        const wireframeSphere = new THREE.Mesh(wireframeGeo, wireframeMat);
+        scene.add(wireframeSphere);
+
+        // Iluminação
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const pointLight = new THREE.PointLight(0x00f3ff, 2, 10);
+        pointLight.position.set(2, 3, 4);
+        scene.add(pointLight);
+
+        const pointLight2 = new THREE.PointLight(0xffffff, 1, 10);
+        pointLight2.position.set(-3, -2, 2);
+        scene.add(pointLight2);
+
+        // Interação com o Mouse
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetRotationX = 0;
+        let targetRotationY = 0;
+
+        document.addEventListener('mousemove', (event) => {
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            
+            // Move a luz com o mouse
+            pointLight.position.x = mouseX * 5;
+            pointLight.position.y = mouseY * 5;
+        });
+
+        // Animação
+        const clock = new THREE.Clock();
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const elapsedTime = clock.getElapsedTime();
+
+            // Rotação automática
+            sphere.rotation.y += 0.002;
+            sphere.rotation.x += 0.001;
+            
+            wireframeSphere.rotation.y -= 0.001;
+            wireframeSphere.rotation.x -= 0.002;
+
+            // Reação suave ao mouse (Tilt)
+            targetRotationX = mouseY * 0.5;
+            targetRotationY = mouseX * 0.5;
+
+            sphere.rotation.x += (targetRotationX - sphere.rotation.x) * 0.05;
+            sphere.rotation.y += (targetRotationY - sphere.rotation.y) * 0.05;
+
+            // Efeito de respiração no emissive
+            material.emissiveIntensity = 0.2 + Math.sin(elapsedTime * 2) * 0.1;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Responsividade do Canvas
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        /* --- 2. Lógica de Scroll Reveal --- */
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Executa na carga inicial
+
+        /* --- 3. Navbar Background on Scroll --- */
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-dark/90', 'py-2', 'shadow-lg');
+                nav.classList.remove('bg-dark/80', 'py-4');
+            } else {
+                nav.classList.remove('bg-dark/90', 'py-2', 'shadow-lg');
+                nav.classList.add('bg-dark/80', 'py-4');
+            }
+        });
+    </script>
 </body>
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
-
-
-
+</html>
